@@ -12,7 +12,7 @@
     <tr>
         <th>Name</th>
         <th>Description</th>
-        <td>Category</td>
+        <th>Category</th>
     </tr>
 
     @foreach (var cheese in Model)
@@ -26,3 +26,4 @@
 </table>
 
 <p><a asp-controller="Cheese" asp-action="Add">Add Cheese</a></p>
+<a asp-controller="Cheese" asp-action="Remove">Remove Cheese</a>

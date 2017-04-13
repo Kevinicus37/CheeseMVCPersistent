@@ -5,9 +5,17 @@
 @{
 }
 <h1>Menus</h1>
+<ul>
 @foreach (var menu in Model)
 {
-    <a asp-controller="Menu" asp-action="ViewMenu" asp-route-id="@menu.ID">@menu.Name</a>
+    <li><a asp-controller="Menu" asp-action="ViewMenu" asp-route-id="@menu.ID">@menu.Name</a></li>
+
+}
+</ul>
+
+@if (Model == null || !Model.Any())
+{
+    <p>No menus yet!</p>
 
 }
 <p><a asp-controller="Menu" asp-action="Add">Add Menu</a></p>

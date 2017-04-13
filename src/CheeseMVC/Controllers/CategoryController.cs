@@ -23,8 +23,8 @@ namespace CheeseMVC.Controllers
         // GET: /<controller>/
         public IActionResult Index()
         {
-            ViewBag.categories = context.Categories.ToList();
-            return View();
+            IList<CheeseCategory> categories = context.Categories.ToList();
+            return View(categories);
         }
 
         public IActionResult Add()
